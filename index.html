@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crystal Luxe Case - Premium Glitter Phone Case</title>
+    <meta name="description" content="Upgrade your phone with our luxurious Crystal Luxe Case. Glitter, chrome, and premium protection in one sleek design.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700;900&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3a2427',
+                        secondary: '#bd94a0',
+                        accent: '#5d3014',
+                        light: '#d0cfd3',
+                        dark: '#5b504e',
+                    },
+                    fontFamily: {
+                        heading: ['Lato', 'sans-serif'],
+                        body: ['Source Sans Pro', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        .gradient-overlay {
+            background: linear-gradient(135deg, rgba(58, 36, 39, 0.9) 0%, rgba(93, 48, 20, 0.85) 100%);
+        }
+        .glassmorphism {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        .product-shadow {
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.3);
+        }
+        .scroll-smooth {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-light dark:bg-primary text-dark dark:text-light font-body scroll-smooth">
+    <!-- Navbar Component -->
+    <custom-navbar></custom-navbar>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://down-id.img.susercontent.com/file/id-11134207-7rasd-m2ezeop3pf8iea@resize_w450_nl.webp');"></div>
+        <div class="absolute inset-0 gradient-overlay"></div>
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <h1 class="text-4xl md:text-6xl font-heading font-bold mb-4 text-white">CRYSTAL LUXE CASE</h1>
+            <p class="text-xl md:text-2xl mb-8 text-secondary max-w-2xl mx-auto">Premium Glitter & Chrome Protection for Your iPhone</p>
+            
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <div class="bg-white dark:bg-dark bg-opacity-80 px-4 py-2 rounded-full flex items-center">
+                    <i data-feather="shield" class="mr-2 text-accent"></i>
+                    <span>Premium Protection</span>
+                </div>
+                <div class="bg-white dark:bg-dark bg-opacity-80 px-4 py-2 rounded-full flex items-center">
+                    <i data-feather="truck" class="mr-2 text-accent"></i>
+                    <span>Free Shipping</span>
+                </div>
+                <div class="bg-white dark:bg-dark bg-opacity-80 px-4 py-2 rounded-full flex items-center">
+                    <i data-feather="clock" class="mr-2 text-accent"></i>
+                    <span>30-Day Warranty</span>
+                </div>
+            </div>
+            
+            <div class="bg-white dark:bg-dark p-6 rounded-lg inline-block glassmorphism">
+                <div class="flex items-center justify-center gap-4 mb-4">
+                    <span class="text-3xl font-bold text-accent">Rp195.000</span>
+                    <span class="text-xl line-through text-gray-500">Rp325.000</span>
+                    <span class="bg-accent text-white px-3 py-1 rounded-full text-sm">40% OFF</span>
+                </div>
+                <a href="#order" class="bg-accent hover:bg-opacity-90 text-white font-bold py-4 px-8 rounded-full inline-flex items-center pulse-animation">
+                    <span>ORDER NOW</span>
+                    <i data-feather="arrow-right" class="ml-2"></i>
+                </a>
+            </div>
+        </div>
+        <a href="#product" class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i data-feather="chevron-down" class="text-white w-10 h-10"></i>
+        </a>
+    </section>
+
+    <!-- Product Showcase -->
+    <section id="product" class="py-20 bg-white dark:bg-dark">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-heading font-bold text-center mb-16">Premium Crystal Luxe Case</h2>
+            
+            <div class="flex flex-col lg:flex-row gap-12 items-center">
+                <div class="lg:w-1/2">
+                    <div class="product-shadow rounded-xl overflow-hidden mb-6">
+                        <img id="mainImage" src="https://down-id.img.susercontent.com/file/id-11134207-7rasd-m2ezeop3pf8iea@resize_w450_nl.webp" alt="Crystal Luxe Case" class="w-full h-auto object-cover">
+                    </div>
+                    
+                    <div class="grid grid-cols-5 gap-3">
+                        <img src="https://down-id.img.susercontent.com/file/id-11134207-7rasd-m2ezeop3pf8iea@resize_w450_nl.webp" 
+                             onclick="changeImage(this.src)" 
+                             class="cursor-pointer rounded-lg border-2 border-transparent hover:border-accent transition-all">
+                        <img src="https://down-id.img.susercontent.com/file/id-11134207-7ras9-m2ezeop3qtsyb9@resize_w450_nl.webp" 
+                             onclick="changeImage(this.src)" 
+                             class="cursor-pointer rounded-lg border-2 border-transparent hover:border-accent transition-all">
+                        <img src="https://down-id.img.susercontent.com/file/id-11134207-7rasc-m2ezeop3s8de07@resize_w450_nl.webp" 
+                             onclick="changeImage(this.src)" 
+                             class="cursor-pointer rounded-lg border-2 border-transparent hover:border-accent transition-all">
+                        <img src="https://down-id.img.susercontent.com/file/id-11134207-7ras8-m2ezeop3tmxu53@resize_w450_nl.webp" 
+                             onclick="changeImage(this.src)" 
+                             class="cursor-pointer rounded-lg border-2 border-transparent hover:border-accent transition-all">
+                        <img src="https://down-id.img.susercontent.com/file/id-11134207-7rasf-m2ezeop3v1iaa6@resize_w450_nl.webp" 
+                             onclick="changeImage(this.src)" 
+                             class="cursor-pointer rounded-lg border-2 border-transparent hover:border-accent transition-all">
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-heading font-bold mb-4">Available Colors</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <button class="w-10 h-10 rounded-full bg-pink-500 border-2 border-transparent hover:border-white focus:border-accent"></button>
+                            <button class="w-10 h-10 rounded-full bg-black border-2 border-transparent hover:border-white focus:border-accent"></button>
+                            <button class="w-10 h-10 rounded-full bg-yellow-400 border-2 border-transparent hover:border-white focus:border-accent"></button>
+                            <button class="w-10 h-10 rounded-full bg-blue-500 border-2 border-transparent hover:border-white focus:border-accent"></button>
+                            <button class="w-10 h-10 rounded-full bg-purple-500 border-2 border-transparent hover:border-white focus:border-accent"></button>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-heading font-bold mb-4">Compatibility</h3>
+                        <p class="mb-4">Fits all iPhone models from 7 to 16 including Pro, Plus and Pro Max versions.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-200 dark:bg-primary px-3 py-1 rounded-full text-sm">iPhone 7/8</span>
+                            <span class="bg-gray-200 dark:bg-primary px-3 py-1 rounded-full text-sm">iPhone X/Xs</span>
+                            <span class="bg-gray-200 dark:bg-primary px-3 py-1 rounded-full text-sm">iPhone 11/12</span>
+                            <span class="bg-gray-200 dark:bg-primary px-3 py-1 rounded-full text-sm">iPhone 13/14</span>
+                            <span class="bg-gray-200 dark:bg-primary px-3 py-1 rounded-full text-sm">iPhone 15/16</span>
+                            <span class="bg-gray-200 dark:bg-primary px-3 py-1 rounded-full text-sm">Pro/Pro Max</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-heading font-bold mb-4">Product Details</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i data-feather="check-circle" class="text-accent mr-2 mt-1"></i>
+                                <span>2-in-1 design: Glitter Luxe + Chrome Frame</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="check-circle" class="text-accent mr-2 mt-1"></i>
+                                <span>Premium scratch-resistant materials</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="check-circle" class="text-accent mr-2 mt-1"></i>
+                                <span>Precise cutouts for all buttons and ports</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="check-circle" class="text-accent mr-2 mt-1"></i>
+                                <span>Raised bezels for screen and camera protection</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="check-circle" class="text-accent mr-2 mt-1"></i>
+                                <span>Non-slip grip for secure handling</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <a href="#order" class="bg-accent hover:bg-opacity-90 text-white font-bold py-4 px-8 rounded-full inline-flex items-center w-full justify-center">
+                        <span>ORDER NOW - Rp195.000</span>
+                        <i data-feather="shopping-cart" class="ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="py-20 bg-gray-100 dark:bg-dark">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-heading font-bold text-center mb-16">Gallery</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <img src="https://down-id.img.susercontent.com/file/id-11134207-7rasf-m2eswgjvaaww53.webp" 
+                     class="rounded-lg cursor-pointer hover:scale-105 transition-transform duration-300" 
+                     onclick="openLightbox(this.src)">
+                <img src="https://down-id.img.susercontent.com/file/id-11134207-7rask-m2eswgjvbphc52.webp" 
+                     class="rounded-lg cursor-pointer hover:scale-105 transition-transform duration-300" 
+                     onclick="openLightbox(this.src)">
+                <img src="https://down-id.img.susercontent.com/file/id-11134207-7ras9-m2eswgjvd41s3f.webp" 
+                     class="rounded-lg cursor-pointer hover:scale-105 transition-transform duration-300" 
+                     onclick="openLightbox(this.src)">
+                <img src="https://down-id.img.susercontent.com/file/id-11134207-7rasa-m2ezeop3ieea45.webp" 
+                     class="rounded-lg cursor-pointer hover:scale-105 transition-transform duration-300" 
+                     onclick="openLightbox(this.src)">
+                <img src="https://down-id.img.susercontent.com/file/id-11134207-7rasi-m2ezeopdi00a4e.webp" 
+                     class="rounded-lg cursor-pointer hover:scale-105 transition-transform duration-300" 
+                     onclick="openLightbox(this.src)">
+                <img src="https://down-id.img.susercontent.com/file/id-11134207-7rasf-m2ezeopdi05q16.webp" 
+                     class="rounded-lg cursor-pointer hover:scale-105 transition-transform duration-300" 
+                     onclick="openLightbox(this.src)">
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center hidden">
+        <div class="relative max-w-4xl w-full p-4">
+            <button onclick="closeLightbox()" class="absolute -top-12 right-0 text-white hover:text-accent">
+                <i data-feather="x" class="w-8 h-8"></i>
+            </button>
+            <img id="lightboxImage" src="" alt="" class="w-full h-auto max-h-[80vh] object-contain">
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <section class="py-20 bg-white dark:bg-dark">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-heading font-bold text-center mb-16">Why Choose Crystal Luxe Case?</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="p-6 rounded-lg glassmorphism">
+                    <div class="w-16 h-16 bg-accent bg-opacity-20 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="shield" class="text-accent w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold mb-3">Military-Grade Protection</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Our cases meet military drop-test standards (MIL-STD-810G) to protect your phone from drops up to 6 feet.</p>
+                </div>
+                
+                <div class="p-6 rounded-lg glassmorphism">
+                    <div class="w-16 h-16 bg-accent bg-opacity-20 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="sliders" class="text-accent w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold mb-3">2-in-1 Design</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Switch between glitter luxury and chrome frame styles to match your mood or occasion.</p>
+                </div>
+                
+                <div class="p-6 rounded-lg glassmorphism">
+                    <div class="w-16 h-16 bg-accent bg-opacity-20 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="droplet" class="text-accent w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold mb-3">Liquid Glitter Technology</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Our patented liquid glitter technology creates a mesmerizing shimmer effect that never fades.</p>
+                </div>
+                
+                <div class="p-6 rounded-lg glassmorphism">
+                    <div class="w-16 h-16 bg-accent bg-opacity-20 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="smartphone" class="text-accent w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold mb-3">Perfect Fit</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Precise cutouts allow full access to all buttons, ports, and features without removing the case.</p>
+                </div>
+                
+                <div class="p-6 rounded-lg glassmorphism">
+                    <div class="w-16 h-16 bg-accent bg-opacity-20 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="award" class="text-accent w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold mb-3">Premium Materials</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Made with high-quality TPU and polycarbonate that won't yellow or degrade over time.</p>
+                </div>
+                
+                <div class="p-6 rounded-lg glassmorphism">
+                    <div class="w-16 h-16 bg-accent bg-opacity-20 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="shield" class="text-accent w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold mb-3">30-Day Warranty</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Your satisfaction is guaranteed with our 30-day money-back warranty.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-gray-100 dark:bg-dark">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-heading font-bold text-center mb-16">What Our Customers Say</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white dark:bg-primary p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gray-300 mr-4 overflow-hidden">
+                            <img src="http://static.photos/people/200x200/1" alt="Customer" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Sarah J.</h4>
+                            <div class="flex text-yellow-400">
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300">"Absolutely stunning case! The glitter effect is mesmerizing and it offers great protection. I've dropped my phone twice already and no damage whatsoever."</p>
+                </div>
+                
+                <div class="bg-white dark:bg-primary p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gray-300 mr-4 overflow-hidden">
+                            <img src="http://static.photos/people/200x200/2" alt="Customer" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Michael T.</h4>
+                            <div class="flex text-yellow-400">
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300">"The chrome frame gives my phone such a premium look. I get compliments every day. The case is also very protective without being bulky."</p>
+                </div>
+                
+                <div class="bg-white dark:bg-primary p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gray-300 mr-4 overflow-hidden">
+                            <img src="http://static.photos/people/200x200/3" alt="Customer" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Jessica L.</h4>
+                            <div class="flex text-yellow-400">
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300">"I was skeptical about the glitter but it's so elegant and not tacky at all. The case is very comfortable to hold and the price is amazing for the quality."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Countdown & Pricing -->
+    <section class="py-20 bg-accent text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-heading font-bold mb-6">Limited Time Offer!</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Get your Crystal Luxe Case at 40% OFF before this deal expires!</p>
+            
+            <div class="flex justify-center mb-12">
+                <div id="countdown" class="flex gap-4">
+                    <div class="bg-white text-accent rounded-lg py-3 px-6">
+                        <div class="text-3xl font-bold" id="days">00</div>
+                        <div class="text-sm">Days</div>
+                    </div>
+                    <div class="bg-white text-accent rounded-lg py-3 px-6">
+                        <div class="text-3xl font-bold" id="hours">00</div>
+                        <div class="text-sm">Hours</div>
+                    </div>
+                    <div class="bg-white text-accent rounded-lg py-3 px-6">
+                        <div class="text-3xl font-bold" id="minutes">00</div>
+                        <div class="text-sm">Minutes</div>
+                    </div>
+                    <div class="bg-white text-accent rounded-lg py-3 px-6">
+                        <div class="text-3xl font-bold" id="seconds">00</div>
+                        <div class="text-sm">Seconds</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="max-w-2xl mx-auto bg-white dark:bg-dark text-dark dark:text-light p-8 rounded-lg shadow-lg">
+                <div class="flex justify-between items-center mb-6">
+                    <div>
+                        <span class="text-4xl font-bold text-accent">Rp195.000</span>
+                        <span class="text-xl line-through ml-2">Rp325.000</span>
+                    </div>
+                    <span class="bg-accent text-white px-4 py-2 rounded-full font-bold">SAVE Rp130.000</span>
+                </div>
+                
+                <div class="mb-8">
+                    <h3 class="text-xl font-heading font-bold mb-4">Package Includes:</h3>
+                    <ul class="text-left space-y-2">
+                        <li class="flex items-center">
+                            <i data-feather="check" class="mr-2 text-accent"></i>
+                            <span>1x Crystal Luxe Case (your choice of color)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="mr-2 text-accent"></i>
+                            <span>Free microfiber cleaning cloth</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="mr-2 text-accent"></i>
+                            <span>30-day warranty card</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <a href="#order" class="bg-accent hover:bg-opacity-90 text-white font-bold py-4 px-8 rounded-full inline-flex items-center w-full justify-center">
+                    <span>ORDER NOW - Rp195.000</span>
+                    <i data-feather="shopping-cart" class="ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Form Section -->
+    <section id="order" class="py-20 bg-white dark:bg-dark">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-heading font-bold text-center mb-4">Get Your Crystal Luxe Case Now</h2>
+            <p class="text-center text-lg mb-12 max-w-2xl mx-auto">Complete the form below to secure your order at the discounted price</p>
+            
+            <div class="max-w-2xl mx-auto bg-gray-100 dark:bg-primary p-8 rounded-lg">
+                <div class="ooef">
+                    <form class="orderonline-embed-form" data-username="mila" data-product-slug="CLS-2" data-product-id="68f682dc7064ac28c5071ece" id="oo-embed-form-CLS-2-2385" data-origin="orderonline">
+                        <div class="ooef-loader">
+                            <style>
+                                .ooef-loader{visibility: hidden;opacity: 0;position: absolute;left: 0;right: 0;top: 0;bottom: 0;display: flex;justify-content: center;align-items: center;flex-direction: column;animation: ooLoadingIn 10s ease;-webkit-animation: ooLoadingIn 10s ease;animation-fill-mode: forwards;overflow: hidden}
+                                @keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}
+                                @-webkit-keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}
+                                .ooef-loader>div,.ooef-loader>div:after{border-radius: 50%;width: 2.5rem;height: 2.5rem}
+                                .ooef-loader>div{font-size: 10px;position: relative;text-indent: -9999em;border: .25rem solid #f5f5f5;border-left: .25rem solid #55c4cf;-webkit-transform: translateZ(0);-ms-transform: translateZ(0);transform: translateZ(0);-webkit-animation: ooLoading 1.1s infinite linear;animation: ooLoading 1.1s infinite linear}
+                                .ooef-loader.error>div{border-left: .25rem solid #ff4500;animation-duration: 5s}
+                                @-webkit-keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}
+                                @keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}
+                            </style>
+                            <div aria-live="polite" role="status"><div>Loading...</div></div>
+                        </div>
+                    </form>
+                </div>
+                
+                <script>
+                    if (typeof xLogError != 'function') {
+                        var xLogError = function (error) {
+                            var req = new XMLHttpRequest();
+                            var payload = JSON.stringify({
+                                url: document.location.href,
+                                line: error.line,
+                                stack: error.stack
+                            });
+                            var params = 'message=' + encodeURIComponent(error.name) + '&payload=' + encodeURIComponent(payload) + '&type=embed&level=error';
+                            req.open('POST', 'https://api.orderonline.id/log', true);
+                            req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+                            req.send(params);
+                        };
+                    }
+                    try {
+                        if (typeof xEmbedScript != 'function') {
+                            var xEmbedScript = function () {
+                                !function(w, d, e, v, id, t, s) {
+                                    if (d.getElementById(id)) return;
+                                    t = d.createElement(e);t.async = !0;t.src = v;t.id = id;
+                                    s = d.getElementsByTagName(e)[0];
+                                    s.parentNode.insertBefore(t, s);
+                                }(window, document, 'script', 'https://cdn.orderonline.id/js/embed-v2-slim.min.js?v=8.0.4', 'oo-embed-js');
+                            };
+                        }
+                        if (typeof xEmbedInit != 'function') {
+                            var xEmbedInit = function (w, n) {
+                                if (w.ooe) return;
+                                n = w.ooe = function() {
+                                    n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                                };
+                                if (!w._ooe) w._ooe = n;
+                                n.push = n;n.loaded = !0;n.version = '8.0.4';n.queue = [];
+                            };
+                        }
+                        xEmbedInit(window);
+                        ooe('setup', 'redirect', 'https://mila.orderonline.id');
+                        ooe('init', '5f1a7b8fa9bf807da24d83bb', '68f682dc7064ac28c5071ece', '68f682dc7064ac28c5071ecf', 'oo-embed-form-CLS-2-2385', {"mode":"page","action":"Klik untuk pemesanan","title":"Form Pemesanan","triggerPixel":true,"triggerGtm":true});
+                        if (!window.jQuery) {
+                            !function(w, d, e, v, id, t, s) {
+                                if (d.getElementById(id)) return;
+                                t = d.createElement(e);t.async = !0;t.src = v;t.id = id;
+                                t.addEventListener('load', xEmbedScript);
+                                s = d.getElementsByTagName(e)[0];
+                                s.parentNode.insertBefore(t, s);
+                            }(window, document, 'script', 'https://cdn.orderonline.id/js/vendor/jquery.min.js', 'oo-embed-jquery');
+                        } else {
+                            xEmbedScript();
+                        }
+                    } catch (e) {
+                        xLogError(e);
+                        throw e;
+                    }
+                </script>
+                
+                <style>
+                    .orderonline-embed-form {
+                        background: transparent !important;
+                        padding: 0 !important;
+                    }
+                    .oo-form-wrapper {
+                        background: transparent !important;
+                    }
+                    .oo-form-step {
+                        background: white !important;
+                        border-radius: 12px !important;
+                        padding: 24px !important;
+                        box-shadow: 0 4px 20px rgba(0,0,0,0.1) !important;
+                        border: none !important;
+                    }
+                    .oo-form-step-title {
+                        font-family: 'Lato', sans-serif !important;
+                        color: #3a2427 !important;
+                        font-weight: 700 !important;
+                        font-size: 24px !important;
+                        margin-bottom: 20px !important;
+                    }
+                    .oo-form-input {
+                        border-radius: 8px !important;
+                        border: 1px solid #d0cfd3 !important;
+                        padding: 12px 16px !important;
+                        font-family: 'Source Sans Pro', sans-serif !important;
+                    }
+                    .oo-form-btn {
+                        background: #5d3014 !important;
+                        border-radius: 8px !important;
+                        font-family: 'Lato', sans-serif !important;
+                        font-weight: 700 !important;
+                        padding: 14px !important;
+                        text-transform: none !important;
+                        transition: all 0.3s ease !important;
+                    }
+                    .oo-form-btn:hover {
+                        background: #3a2427 !important;
+                        transform: translateY(-2px) !important;
+                    }
+                    .oo-form-product-price {
+                        color: #5d3014 !important;
+                        font-weight: 700 !important;
+                    }
+                </style>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gray-100 dark:bg-dark">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-heading font-bold text-center mb-16">Frequently Asked Questions</h2>
+            
+            <div class="max-w-3xl mx-auto space-y-6">
+                <div class="bg-white dark:bg-primary p-6 rounded-lg shadow">
+                    <h3 class="text-xl font-heading font-bold mb-3 flex items-center justify-between cursor-pointer" onclick="toggleFAQ(this)">
+                        <span>What iPhone models is this case compatible with?</span>
+                        <i data-feather="chevron-down" class="transform transition-transform duration-300"></i>
+                    </h3>
+                    <div class="faq-content hidden pt-3">
+                        <p class="text-gray-600 dark:text-gray-300">The Crystal Luxe Case is compatible with all iPhone models from iPhone 7 to iPhone 16, including Plus, Pro, and Pro Max versions. The precise cutouts ensure all buttons, ports, and features remain fully accessible.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white dark:bg-primary p-6 rounded-lg shadow">
+                    <h3 class="text-xl font-heading font-bold mb-3 flex items-center justify-between cursor-pointer" onclick="toggleFAQ(this)">
+                        <span>Does the glitter fade over time?</span>
+                        <i data-feather="chevron-down" class="transform transition-transform duration-300"></i>
+                    </h3>
+                    <div class="faq-content hidden pt-3">
+                        <p class="text-gray-600 dark:text-gray-300">No, our patented liquid glitter technology ensures the glitter effect remains vibrant and never fades. The glitter is sealed between layers of durable material, protecting it from wear and tear.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white dark:bg-primary p-6 rounded-lg shadow">
+                    <h3 class="text-xl font-heading font-bold mb-3 flex items-center justify-between cursor-pointer" onclick="toggleFAQ(this)">
+                        <span>How long does shipping take?</span>
+                        <i data-feather="chevron-down" class="transform transition-transform duration-300"></i>
+                    </h3>
+                    <div class="faq-content hidden pt-3">
+                        <p class="text-gray-600 dark:text-gray-300">We offer free standard shipping that typically takes 3-5 business days. For faster delivery, you can choose express shipping at checkout which delivers in 1-2 business days.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white dark:bg-primary p-6 rounded-lg shadow">
+                    <h3 class="text-xl font-heading font-bold mb-3 flex items-center justify-between cursor-pointer" onclick="toggleFAQ(this)">
+                        <span>What is your return policy?</span>
+                        <i data-feather="chevron-down" class="transform transition-transform duration-300"></i>
+                    </h3>
+                    <div class="faq-content hidden pt-3">
+                        <p class="text-gray-600 dark:text-gray-300">We offer a 30-day money-back guarantee. If you're not completely satisfied with your purchase, simply return it in its original condition for a full refund, no questions asked.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white dark:bg-primary p-6 rounded-lg shadow">
+                    <h3 class="text-xl font-heading font-bold mb-3 flex items-center justify-between cursor-pointer" onclick="toggleFAQ(this)">
+                        <span>How do I clean my Crystal Luxe Case?</span>
+                        <i data-feather="chevron-down" class="transform transition-transform duration-300"></i>
+                    </h3>
+                    <div class="faq-content hidden pt-3">
+                        <p class="text-gray-600 dark:text-gray-300">Simply wipe your case with a soft, damp cloth. For deeper cleaning, use a mild soap solution. Avoid harsh chemicals or abrasive materials that could scratch the surface.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Badges -->
+    <section class="py-12 bg-white dark:bg-dark">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap justify-center gap-8 md:gap-16">
+                <div class="flex flex-col items-center">
+                    <i data-feather="shield" class="w-12 h-12 text-accent mb-2"></i>
+                    <span class="font-bold">30-Day Warranty</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <i data-feather="truck" class="w-12 h-12 text-accent mb-2"></i>
+                    <span class="font-bold">Free Shipping</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <i data-feather="credit-card" class="w-12 h-12 text-accent mb-2"></i>
+                    <span class="font-bold">Secure Payment</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <i data-feather="headphones" class="w-12 h-12 text-accent mb-2"></i>
+                    <span class="font-bold">24/7 Support</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-20 bg-gradient-to-r from-primary to-accent">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-heading font-bold text-white mb-6">Ready to Elevate Your iPhone?</h2>
+            <p class="text-xl text-secondary max-w-2xl mx-auto mb-8">Don't miss out on this limited-time offer. Get your Crystal Luxe Case today!</p>
+            <a href="#order" class="bg-white hover:bg-opacity-90 text-accent font-bold py-4 px-8 rounded-full inline-flex items-center pulse-animation">
+                <span>ORDER NOW - Rp195.000</span>
+                <i data-feather="arrow-right" class="ml-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <custom-footer></custom-footer>
+
+    <!-- Web Components -->
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Feather Icons
+        feather.replace();
+        
+        // Change product image
+        function changeImage(src) {
+            document.getElementById('mainImage').src = src;
+        }
+        
+        // Lightbox functionality
+        function openLightbox(src) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImage = document.getElementById('lightboxImage');
+            lightboxImage.src = src;
+            lightbox.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+        
+        // Countdown timer
+        function updateCountdown() {
+            const countDownDate = new Date();
+            countDownDate.setDate(countDownDate.getDate() + 3); // 3 days from now
+            
+            const now = new Date().getTime();
+            const distance = countDownDate - now;
+            
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
+            document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
+            document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
+            document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
+            
+            if (distance < 0) {
+                clearInterval(countdownInterval);
+                document.getElementById("countdown").innerHTML = "OFFER EXPIRED";
+            }
+        }
+        
+        const countdownInterval = setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // FAQ toggle
+        function toggleFAQ(element) {
+            const content = element.nextElementSibling;
+            const icon = element.querySelector('i');
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            } else {
+                content.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+            }
+        }
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
